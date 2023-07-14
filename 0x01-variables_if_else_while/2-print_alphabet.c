@@ -10,8 +10,10 @@
 int main(void)
 {
 	char *alpha = "abcdefghijklmnopqrstuvwxyz";
-
-	for (int i = 0; i < strlen(alpha); i++)
+	int i;
+	int lenAlpha = strlen(alpha);
+	
+	for (i = 0; i < lenAlpha; i++)
 	{
 		putchar(alpha[i]);
 	}
