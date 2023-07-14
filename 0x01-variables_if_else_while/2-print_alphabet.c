@@ -12,7 +12,7 @@ int main(void)
 	char *alpha = "abcdefghijklmnopqrstuvwxyz";
 	int i;
 	int lenAlpha = strlen(alpha);
-	
+
 	for (i = 0; i < lenAlpha; i++)
 	{
 		putchar(alpha[i]);
