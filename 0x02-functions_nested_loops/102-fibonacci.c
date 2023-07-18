@@ -26,6 +26,5 @@ int main(void)
 		else
 			printf("%i, ", arr[i]);
 	}
-	printf("array length = %li\n", (sizeof(arr) / sizeof(arr[0])));
 	return (0);
 }
