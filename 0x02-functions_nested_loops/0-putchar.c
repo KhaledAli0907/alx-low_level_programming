@@ -10,9 +10,9 @@ int main(void)
 {
 	char s[] = "_putchar";
 	int i;
-	int length = sizeof(s) / sizeof(s[0]);
+	/*int length = sizeof(s) / sizeof(s[0]);*/
 
-	for (i = 0; i <= length; i++)
+	for (i = 0; i < 8; i++)
 	{
 		_putchar(s[i]);
 	}
