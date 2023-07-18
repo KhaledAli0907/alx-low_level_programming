@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* main - Entry point
+* times_table - Entry point
 *
 * Return: Always 0 (Success)
 */
@@ -27,7 +27,7 @@ void times_table(void)
 					_putchar(' ');
 					_putchar(n + '0');
 				}
-				else if (col != 9)
+				if (col != 9)
 				{
 					_putchar(',');
 					_putchar(' ');
