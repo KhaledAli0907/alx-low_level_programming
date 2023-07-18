@@ -9,8 +9,8 @@
 
 int main(void)
 {
-	int i, sum;
-	int arr[50] = {1, 2};
+	long i, sum;
+	long arr[50] = {1, 2};
 
 	for (i = 2; i < 50; i++)
 	{
@@ -21,10 +21,10 @@ int main(void)
 	for (i = 0; i < 50; i++)
 	{
 		if (i == 49)
-			printf("%i\n", arr[i]);
+			printf("%lu\n", arr[i]);
 
 		else
-			printf("%i, ", arr[i]);
+			printf("%lu, ", arr[i]);
 	}
 	return (0);
 }
