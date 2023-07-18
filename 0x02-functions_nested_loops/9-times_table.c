@@ -32,10 +32,6 @@ void times_table(void)
 					_putchar(',');
 					_putchar(' ');
 				}
-				else if (col == 9)
-				{
-					_putchar('$');
-				}
 		}
 		_putchar('\n');
 	}
