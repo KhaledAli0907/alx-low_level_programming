@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	int n = 495;
+	int n = -495;
 	int i = n % 10;
 	printf("%i \n", i);
 	
