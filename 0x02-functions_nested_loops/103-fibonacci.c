@@ -10,7 +10,7 @@
 int main(void)
 {
 	unsigned long i, j, sum, x;
-	
+
 	i = 1;
 	j = 2;
 	sum = 0;
@@ -20,7 +20,7 @@ int main(void)
 	{
 		if ((j % 2) == 0)
 			sum += j;
-		
+
 		x = i + j;
 		i = j;
 		j = x;
