@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* main - Entry point
+* print_triangle - prints a trianagle
 *
-* Return: Always 0 (Success)
+* @size : size of the trianagle
 */
 
 void print_triangle(int size)
@@ -17,7 +17,7 @@ void print_triangle(int size)
 	{
 		for (space = size - 2; space >= row; space--)
 			_putchar(' '); /* print spaces */
-		
+
 		for (hash = 0; hash <= row; hash++)
 			_putchar('#'); /* prints hashtags */
 
