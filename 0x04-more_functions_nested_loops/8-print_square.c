@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
-* main - Entry point
-*
-* Return: Always 0 (Success)
+* print_square - prints a square
+* @size : size of the sqaure
 */
 
 void print_square(int size)
@@ -12,14 +11,13 @@ void print_square(int size)
 
 	if (size <= 0)
 		_putchar('\n');
-	
+
 	for (row = 1; row <= size; row++)
 	{
 		for (col = 1; col <= size; col++)
 		{
 			_putchar('#');
 		}
-		_putchar('\n');	
+		_putchar('\n');
 	}
-
 }
