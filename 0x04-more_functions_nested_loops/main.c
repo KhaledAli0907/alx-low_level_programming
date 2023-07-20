@@ -8,8 +8,11 @@
  *     */
 int main(void)
 {
-    print_triangle(2);
-    print_triangle(10);
-    print_triangle(0);
+    print_number(2);
+	_putchar('\n'); 
+    print_number(15);
+	_putchar('\n'); 
+    print_number(-95);
+	_putchar('\n'); 
 	return (0);
 }
