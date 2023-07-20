@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
-* main - Entry point
+* print_diagonal - draws a diagonal line of the terminal
 *
-* Return: Always 0 (Success)
+* @n : number of lines
+*
 */
 
 void print_diagonal(int n)
