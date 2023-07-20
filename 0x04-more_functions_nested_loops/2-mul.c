@@ -1,7 +1,8 @@
 /**
 * mul - Multiply two ints
 *
-* @a, @b : Integers
+* @a : Integer
+* @b : Integer
 *
 * Return: Multiplication result
 */
