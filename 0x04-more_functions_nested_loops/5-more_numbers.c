@@ -1,9 +1,7 @@
 #include "main.h"
 
 /**
-* main - Entry point
-*
-* Return: Always 0 (Success)
+* more_numbers - prints 10 times the numbers from 0 to 14
 */
 
 void more_numbers(void)
