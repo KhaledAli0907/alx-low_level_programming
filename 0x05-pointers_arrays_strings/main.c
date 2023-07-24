@@ -5,8 +5,7 @@ int main(void)
 {
 	char *str;
 
-	str = "My School";
-	rev_string(str);
-	printf("string: %s\n", str);
+	str = "0123456789";
+	puts2(str);
 	return (0);
 }
