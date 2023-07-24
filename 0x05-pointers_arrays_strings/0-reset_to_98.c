@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* main - Entry point
+* reset_to_98 - update the value to what pointer points to to
 *
-* Return: Always 0 (Success)
+* @n : pointer to an int
 */
 
 void reset_to_98(int *n)
