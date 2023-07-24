@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
-* main - Entry point
+* puts2 - prints every other character
 *
-* Return: Always 0 (Success)
+* @str: string
 */
 
 void puts2(char *str)
 {
 	int i, len;
-	
+
 	len = 0;
 	while (str[len] != '\0')
 		len++;
