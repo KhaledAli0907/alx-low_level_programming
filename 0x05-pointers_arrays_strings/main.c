@@ -5,6 +5,6 @@ int main(void)
 	char *str;
 
 	str = "12345";
-	rev_string(str);
+	print_rev(str);
 	return (0);
 }
