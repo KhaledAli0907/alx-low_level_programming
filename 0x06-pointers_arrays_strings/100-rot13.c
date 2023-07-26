@@ -18,10 +18,12 @@ char *rot13(char *s)
 		{
 			s[i] = (((s[i] - 'a') + key) % 26) + 'a';
 		}
-		else
-		{
-			s[i] = (((s[i] - 'A') + key) % 26) + 'A';
-		}
+		/*
+		*else
+		*{
+		*	s[i] = (((s[i] - 'A') + key) % 26) + 'A';
+		*}
+		*/
 	}
 
 	return (s);
