@@ -18,7 +18,7 @@ char *rot13(char *s)
 		{
 			s[i] = (((s[i] - 'a') + key) % 26) + 'a';
 		}
-		else if (s[i] >= 'A' && s[i] <= 'Z')
+		else
 		{
 			s[i] = (((s[i] - 'A') + key) % 26) + 'A';
 		}
