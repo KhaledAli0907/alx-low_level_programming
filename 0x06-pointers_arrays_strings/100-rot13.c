@@ -1,13 +1,28 @@
 #include "main.h"
 
 /**
-* main - Entry point
+* rot13 - encodes a string using rot 13
 *
-* Return: Always 0 (Success)
+* @s: Input String
+*
+* Return: String after processing
 */
 
 char *rot13(char *s)
 {
 	int i, key = 13;
-	
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] = (((s[i] - 'a') + key) % 26) + 'a';
+		}
+		else if (s[i] >= 'A' && s[i] <= 'Z')
+		{
+			s[i] = (((s[i] - 'A') + key) % 26) + 'A';
+		}
+	}
+
+	return (s);
 }
