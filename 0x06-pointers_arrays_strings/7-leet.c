@@ -1,15 +1,17 @@
 #include "main.h"
 
 /**
-* main - Entry point
+* leet - encodes a string into 1337.
 *
-* Return: Always 0 (Success)
+* @s: Input String.
+*
+* Return: the modified string.
 */
 
 char *leet(char *s)
 {
-	
-	char upper[] = {'A','E', 'O', 'T', 'L'};
+
+	char upper[] = {'A', 'E', 'O', 'T', 'L'};
 	char lower[] = { 'a', 'e', 'o', 't', 'l'};
 	char values[] = {'4', '3', '0', '7', '1'};
 	int i, j;
