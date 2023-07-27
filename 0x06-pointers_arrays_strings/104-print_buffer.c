@@ -18,6 +18,8 @@ void print_buffer(char *b, int size)
 		j = 0;
 		while (j < 10 && i + j < size)
 		{
+			printf("%02x", b[i + j]);
+			j++;
 			printf("%02x ", b[i + j]);
 			j++;
 		}
