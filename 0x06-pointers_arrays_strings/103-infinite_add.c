@@ -13,7 +13,7 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0, len1 = 0, len2 = 0, carry = 0, sum = 0, k = 0;
+	int i = 0, j = 0, l1 = 0, l2 = 0, carry = 0, sum = 0, k = 0;
 
 	/* Get the length of the two numbers */
 	while (n1[l1] != '\0')
