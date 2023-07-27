@@ -13,34 +13,44 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0, l1 = 0, l2 = 0, carry = 0, sum = 0, k = 0;
+	int x = 0, y = 0, l1 = 0, l2 = 0, lar = 0, carry = 0, k = 0;
 
-	/* Get the length of the two numbers */
 	while (n1[l1] != '\0')
 		l1++;
 
 	while (n2[l2] != '\0')
 		l2++;
-
-	/* if the length of the numbers more than the size of buffer return 0 */
-	if (l1 + 1 > size_r || l2 + 1 > size_r)
+	if (l1 > l2)
+		lar = l1;
+	else
+		lar = l2;
+	if (lar + 1 > size_r)
 		return (0);
-
-	while (i < l1 || j < l2 || carry)
+	r[lar] = '\0';
+	for (k = lar - 1; k >= 0; k--)
 	{
-		sum = carry;
-		if (i < l1)
-			sum += n1[l1 - i - 1] - '0';
-		if (j < l2)
-			sum += n2[l2 - j - 1] - '0';
+		l1--;
+		l2--;
 
-		carry = sum / 10;
-		if (k >= size_r - 1 || (k == size_r - 2 && carry))
-			return (0);
-		r[k++] = sum % 10 + '0';
-		i++;
-		j++;
+		if (l1 >= 0)
+			x = n1[l1] - '0';
+		else
+			x = 0;
+		if (l2 >= 0)
+			y = n2[l2] - '0';
+		else
+			y = 0;
+		r[k] = ((x + y + carry) % 10) + '0';
+		carry = (x + y + carry) / 10;
 	}
-	r[k] = '\0';
+	if (carry == 1)
+	{
+		r[lar + 1] = '\0';
+		if (r[lar + 2] > size_r)
+			return (0);
+		while (lar-- >= 0)
+			r[lar + 1] = r[lar];
+		r[0] = carry + '0';
+	}
 	return (r);
 }
