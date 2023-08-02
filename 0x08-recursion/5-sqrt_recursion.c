@@ -12,7 +12,7 @@ int check_sqrt(int a, int b)
 {
 	if (a == (b * b))
 		return (b);
-	else if ( b * b >= a)
+	else if (b * b >= a)
 		return (-1);
 	return (check_sqrt(a, b + 1));
 }

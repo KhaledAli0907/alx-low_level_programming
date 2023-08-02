@@ -6,7 +6,7 @@
  * @x: Integer
  * @y: Positive int
  *
- * Retrun: the resulting value, -1 if ther's error
+ * Return: the resulting value, -1 if ther's error
  */
 
 int _pow_recursion(int x, int y)
