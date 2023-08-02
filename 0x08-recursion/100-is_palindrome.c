@@ -8,7 +8,7 @@
  * @i: start
  * @j: end
  *
- * Return 1 if string @s a palindrome, 0 otherwise.
+ * Return: 1 if string @s a palindrome, 0 otherwise.
  */
 int check_palindrome(char *s, int i, int j)
 {
@@ -28,6 +28,5 @@ int check_palindrome(char *s, int i, int j)
  */
 int is_palindrome(char *s)
 {
-	
 	return (check_palindrome(s, 0, strlen(s) - 1));
 }
