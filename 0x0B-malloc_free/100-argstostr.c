@@ -5,23 +5,21 @@
  * argstostr - concatenates all argments
  *
  * @ac: number of args
- * @ac: array of args
+ * @av: array of args
  *
  * Return: pointer to the concatenated args
  */
-char *argstostr(int ac, int **av)
+char *argstostr(int ac, char **av)
 {
 	int i = 0, j = 0, x = 0, len = 0;
 	char *arg = NULL;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	
+
 	/* get the length of the args */
-	for (i = 0; i < ac; i++)
-		for (j = 0; av[i][j]; j++)
-			len++;
-	len += ac;
+	for (i = 0; i < ac; i++, len++)
+		len += strlen(av[i]);
 
 	arg = malloc(sizeof(char) * len + 1);
 	if (arg == NULL)
@@ -39,5 +37,5 @@ char *argstostr(int ac, int **av)
 		arg[x++] = '\n';
 	}
 	arg[x] = '\0';
-	return(arg);
+	return (arg);
 }
