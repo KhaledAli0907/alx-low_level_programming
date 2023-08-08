@@ -23,6 +23,9 @@ char **strtow(char *str)
 	if (words == NULL)
 		return (NULL);
 
+	if (str[0] == ' ' && str[1] == '\0')
+		return (NULL);
+
 	for (i = 0; i < count; i++)
 	{
 		while (str[spaces] == ' ')
