@@ -18,14 +18,11 @@ char **strtow(char *str)
 	for (i = 0; str[i]; i++)
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 			count++;
-
 	words = malloc(sizeof(char *) * (count + 1));
 	if (words == NULL)
 		return (NULL);
-
 	if (str[0] == ' ' && str[1] == '\0')
 		return (NULL);
-
 	for (i = 0; i < count; i++)
 	{
 		while (str[spaces] == ' ')
