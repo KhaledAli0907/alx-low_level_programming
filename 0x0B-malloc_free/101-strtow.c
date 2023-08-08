@@ -12,7 +12,7 @@ char **strtow(char *str)
 	char **words = NULL;
 	int i = 0, j = 0, count = 0, spaces = 0, len = 0;
 
-	if (str == NULL || str[0] == '\0')
+	if (str == NULL || str[0] == '\0' || (str[0] == ' ' && str[1] == '\0'))
 		return (NULL);
 
 	for (i = 0; str[i]; i++)
@@ -21,8 +21,7 @@ char **strtow(char *str)
 	words = malloc(sizeof(char *) * (count + 1));
 	if (words == NULL)
 		return (NULL);
-	if (str[0] == ' ' && str[1] == '\0')
-		return (NULL);
+
 	for (i = 0; i < count; i++)
 	{
 		while (str[spaces] == ' ')
@@ -31,6 +30,8 @@ char **strtow(char *str)
 		len = 0;
 		while (str[spaces + len] != ' ' && str[spaces + len] != '\0')
 			len++;
+		if (str[i] == ' ' && str[i + 1] == '\0')
+			return (NULL);
 
 		/* try to locate memory for the string */
 		words[i] = malloc(sizeof(char) * (len + 1));
