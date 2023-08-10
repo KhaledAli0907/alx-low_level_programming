@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (!isdigit(argv[i][j]))
+			if (argv[i][j] > '9' || argv[i][j] < '0')
 			{
 				for (x = 0; x < size; x++)
 					_putchar(err[x]);
@@ -60,5 +60,5 @@ void print(long n)
 	if (n / 10)
 		print(n / 10);
 
-	_putchar('0' + n % 10);
+	_putchar('0' + (n % 10));
 }
