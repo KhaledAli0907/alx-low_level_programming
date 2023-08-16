@@ -1,9 +1,10 @@
 /**
- * int_index - searches for an integer
- *
+ * int_index - search for an int
  * @array: array
  * @size: number of elemnts in the array
  * @cmp: function pointer
+ *
+ * Return: index of the element
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
