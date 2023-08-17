@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
 			/* string */
 			case 's':
 				str = va_arg(params, char *);
-				if (!str)
+				if (str == NULL)
 					str = "(nil)";
 				printf("%s%s", str, sep);
 				break;
