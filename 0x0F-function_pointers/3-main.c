@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 	op = argv[2];
 
 	/* handle operator erros */
-	if (argv[2][1] != '\0' && get_op_func(op) == NULL)
+	if (argv[2][1] != '\0' || get_op_func(op) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
