@@ -18,6 +18,6 @@
     struct list_s *next;
 } list_t;
 
-/* functions */
+/* Functions */
 size_t print_list(const list_t *h);
 #endif
