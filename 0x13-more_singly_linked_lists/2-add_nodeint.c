@@ -6,7 +6,7 @@
  * @head: pointer to header pointer
  * @n: the number to insert
  *
- * Return: The address of the new elments, NULL otherwise.
+ * return: the address of the new elments, null otherwise.
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
