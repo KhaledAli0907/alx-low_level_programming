@@ -23,22 +23,22 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (node == NULL)
 		return (NULL);
 
-	/* go to the desired position */
-	for (i = 0; i < idx - 1; i++)
-		new = new->next;
-	if (new != NULL)
-	{
-		node->next = new->next;
-		new->next = node;
-	}
-	else
-		node->next = NULL;
-
-	if (*head == NULL || idx == 0)
-	{
-		node->next = *head;
-		*head = node;
-	}
 	node->n = n;
+
+	if (idx == 0)
+	{
+		node->next = new;
+		*head = node;
+		return (node);
+	}
+	/* go to the desired position */
+	for (i = 0; i < (idx - 1); i++)
+	{
+		if (new == NULL || new->next == NULL)
+			return (NULL);
+		new = new->next;
+	}
+	node->next = new->next;
+	new->next = node;
 	return (node);
 }
