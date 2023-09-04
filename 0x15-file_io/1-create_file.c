@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * create_file - Creates a file
@@ -10,11 +11,8 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	ssize_t len = 0, bytes = 0;
+	ssize_t len = strlen(text_content), bytes = 0;
 	int fp = 0;
-
-	while (*text_content++)
-		len++;
 
 	if (!filename)
 		return (-1);
