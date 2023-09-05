@@ -213,7 +213,7 @@ void more_osabi(Elf64_Ehdr h)
  */
 void printAbiv(Elf64_Ehdr h)
 {
-	 printf("ABI Version:                      %d\n",
+	 printf("  ABI Version:                       %d\n",
 			 h.e_ident[EI_ABIVERSION]);
 }
 
