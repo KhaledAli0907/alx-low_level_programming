@@ -218,7 +218,7 @@ void printAbiv(Elf64_Ehdr h)
 }
 
 /**
- * printData - prints the ELF type
+ * printType - prints the ELF type
  *
  * @h: elf header
  */
