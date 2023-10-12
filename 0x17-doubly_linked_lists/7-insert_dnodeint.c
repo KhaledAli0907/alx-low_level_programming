@@ -24,11 +24,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	/* if inserted in the 0th posiotion */
 	if (idx == 0)
 	{
-		node->next = *h;
+		node->next = temp;
 		node->prev = NULL;
 		*h = node;
 		return (node);
 	}
+	/* go to the desired location */
 	for (i = 0; i < (idx - 1); i++)
 	{
 		if (temp == NULL || temp->next == NULL)
@@ -36,8 +37,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 		temp = temp->next;
 	}
+	/* if inserting at the end of the list */
+	if (temp->next == NULL)
+		return (add_dnodeint_end(h, n));
+
 	node->next = temp->next;
 	node->prev = temp;
+	temp->next->prev = node;
 	temp->next = node;
 	return (node);
 }
